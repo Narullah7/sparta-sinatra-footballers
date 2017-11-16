@@ -7,11 +7,22 @@ class FootballControllers < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  $images = [{
+    
 
+
+
+
+    }]
 
   get "/" do
     @title = "Homepage"
     erb :'footballers/home'
+  end
+
+  get "/photos" do
+    @title = "Footballers page"
+    erb :'footballers/show'
   end
 
 
