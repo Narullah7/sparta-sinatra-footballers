@@ -1,0 +1,12 @@
+
+
+<h1>Welcome to my photos page</h1>
+
+<% @images.each do |photo| %>
+
+<div>
+  <h3><a href="/footballers/<%=  photo[:id]%>"> <%= photo[:title] %></a></h3>
+  <img src="<%= photo[:img] %>" alt="">
+</div>
+
+<% end %>

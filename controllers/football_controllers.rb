@@ -7,13 +7,24 @@ class FootballControllers < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  $images = [{
-    
-
-
-
-
-    }]
+  $photos = [{
+	 id: 0,
+	 title: "Photo 1",
+	 body: "This is the first post",
+   img: "http://fillmurray.com/300/300"
+},
+{
+    id: 1,
+    title: "Photo 2",
+    body: "This is the second post",
+    img: "http://fillmurray.com/300/300"
+},
+{
+    id: 2,
+    title: "Photo 3",
+    body: "This is the third post",
+    img: "http://fillmurray.com/300/300"
+}];
 
   get "/" do
     @title = "Homepage"
@@ -22,7 +33,8 @@ class FootballControllers < Sinatra::Base
 
   get "/photos" do
     @title = "Footballers page"
-    erb :'footballers/show'
+    @images = $photos
+    erb :'footballers/index'
   end
 
 
