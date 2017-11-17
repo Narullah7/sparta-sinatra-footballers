@@ -1,0 +1,17 @@
+<!-- Basic html page layout for everypage -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> <%= @title %> </title>
+  </head>
+  <body>
+
+    <%= erb(:'partials/nav', :layout => false) %>
+    <%= yield %>
+    <br><br>
+    <%= erb(:'partials/footer', :layout => false) %>
+
+  </body>
+</html>
