@@ -44,6 +44,13 @@ class FootballControllers < Sinatra::Base
     erb :'footballers/show'
   end
 
+  get "/photos/:id/edit" do
+    @title = "Edit"
+    id = params[:id].to_i
+    @images = $photos[id]
+    erb :'footballers/edit'
+  end
+
 
 
 
